@@ -20,8 +20,10 @@ const Search = ({ setProfile }) => {
 			const res = await axios.get(`/api/preview/${urlEnding}`);
 			if (res.status !== 200) {
 				toast.error(res.data);
+			} else {
+				console.log(res.data);
+				setProfile(res.data);
 			}
-			setProfile(res.data);
 		}
 		setUrl('');
 	};
