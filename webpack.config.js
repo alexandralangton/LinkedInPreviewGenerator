@@ -22,6 +22,10 @@ module.exports = {
 					plugins: ['@babel/transform-runtime'],
 				},
 			},
+			{
+				test: /\.css$/,
+				use: ['style-loader', 'css-loader'],
+			},
 		],
 	},
 };

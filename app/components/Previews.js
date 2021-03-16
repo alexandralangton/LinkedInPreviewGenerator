@@ -5,17 +5,22 @@ const Previews = (props) => {
 	const { title, description, src, url } = props.profile;
 	if (title) {
 		return (
-			<>
-				<h1>LinkedIn Profile</h1>
-				<span>{url}</span>
-				<br />
-				<h3>
-					<b>{ReactHtmlParser(title)}</b>
-				</h3>
-				<span>{ReactHtmlParser(description)}</span>
-				<br />
-				<img src={src} width="200px" height="200px" />
-			</>
+			<div id="cardBox" className="whiteBox">
+				<h2>Generated Profile Card:</h2>
+				<div id="profileCard">
+					<div>
+						<img src={src} id="previewImg" />
+					</div>
+					<div id="cardText">
+						<a href={url} target="_blank" rel="noopener noreferrer">
+							<span>{url}</span>
+						</a>
+						<br />
+						<h3>{ReactHtmlParser(title)}</h3>
+						<p>{ReactHtmlParser(description)}</p>
+					</div>
+				</div>
+			</div>
 		);
 	} else {
 		return null;

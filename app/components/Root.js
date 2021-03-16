@@ -5,10 +5,10 @@ import Previews from './Previews';
 const Root = () => {
 	const [profile, setProfile] = useState({});
 	return (
-		<>
+		<div className="flexCenter">
 			<Search setProfile={setProfile} />
 			<Previews profile={profile} setProfile={setProfile} />
-		</>
+		</div>
 	);
 };
 

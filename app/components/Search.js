@@ -19,19 +19,22 @@ const Search = ({ setProfile }) => {
 	};
 
 	return (
-		<>
+		<div id="searchBox" className="whiteBox">
 			<form onSubmit={getPreview}>
-				<h1>Please enter a valid LinkedIn url:</h1>
-				<br />
+				<h1>LinkedIn Preview Card Generator</h1>
+				<p>Enter a valid LinkedIn url to fetch the respective preview:</p>
 				<input
+					id="searchbar"
 					name="url"
 					type="text"
 					value={url}
 					onChange={(e) => setUrl(e.target.value)}
 				/>
-				<button type="submit">Submit</button>
+				<button id="searchbutton" type="submit">
+					Submit
+				</button>
 			</form>
-		</>
+		</div>
 	);
 };
 

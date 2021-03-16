@@ -1,0 +1,87 @@
+body {
+    background-color: #edf7fd;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input, button {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, p {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-weight: 600;
+    margin-top: 0;
+}
+
+h2 {
+    margin-top: 1rem;
+}
+
+.flexCenter {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#searchBox {
+    max-width: 50vw;
+    margin: 8vh 0;
+    padding: 3rem;
+}
+
+.whiteBox {
+    text-align: center;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+#searchbar {
+    width: 35vw;
+    height: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5%;
+    box-shadow: 1px 1px gray;
+}
+
+#searchbutton {
+    background-color: #f64d2e;
+    color: white;
+    border: none;
+    height: 2.5rem;
+    width: 5rem;
+    font-size: 1rem;
+    border-radius: 10%;
+    box-shadow: 1px 1px gray;
+}
+
+#cardBox {
+    max-width: 80vw;
+}
+
+#profileCard {
+    text-align: left;
+    margin: 2rem 3rem;
+    padding: 1rem 1rem 0rem 1rem;
+    background-color: #fbf8f0;
+    box-shadow:3px 3px 5px rgba(30,30,30,.8);
+    color: rgba(30,30,30,.8);
+    display: flex;
+}
+
+#previewImg {
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+    border-radius: 2%;
+    border: 2px solid rgba(30,30,30,.8);;
+}
+
+#cardText {
+    padding-top: 0.75rem;
+}
