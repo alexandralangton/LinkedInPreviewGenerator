@@ -40,6 +40,13 @@ h2 {
     border-radius: 1rem;
 }
 
+#error {
+    margin-top: 1rem;
+    color: #f64d2e;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
 #searchbar {
     width: 35vw;
     height: 2rem;
