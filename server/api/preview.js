@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const axios = require('axios');
-require('../keys.js');
+require('./keys');
 
 router.get('/:url', async (req, res, next) => {
 	try {

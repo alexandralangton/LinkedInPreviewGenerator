@@ -8,12 +8,15 @@ const Search = ({ setProfile }) => {
 
 	const getPreview = async (e) => {
 		e.preventDefault();
-		if (!url.match(/www.linkedin.com/i)) {
+		if (!url.match(/.linkedin.com/i)) {
 			toast.error('Please enter a valid LinkedIn url');
 		} else {
-			let urlEnding = url
-				.replace(/((https?:\/\/)?www\.linkedin\.com(\/)?(in)?)(\/)/g, '')
-				.replace(/(\/)$/, '');
+			let urlEnding;
+			let splitUrl = url.split('/');
+			urlEnding =
+				splitUrl[splitUrl.length - 1] === ''
+					? splitUrl[splitUrl.length - 2]
+					: splitUrl[splitUrl.length - 1];
 			const res = await axios.get(`/api/preview/${urlEnding}`);
 			if (res.status !== 200) {
 				toast.error(res.data);
