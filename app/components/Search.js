@@ -5,18 +5,21 @@ const Search = ({ setProfile }) => {
 	const [url, setUrl] = useState('');
 
 	const getPreview = async (e) => {
-		e.preventDefault();
-		let endIdx = url.lastIndexOf('/');
-		const res = await axios.get(`/api/preview/${url.slice(endIdx + 1)}`);
-		setProfile(res.data);
+		if (!url.match(/www.linkedin.com/)) {
+			alert('Please enter a valid linkedin url');
+		} else {
+			e.preventDefault();
+			let endIdx = url.lastIndexOf('/');
+			const res = await axios.get(`/api/preview/${url.slice(endIdx + 1)}`);
+			setProfile(res.data);
+		}
 		setUrl('');
 	};
 
 	return (
 		<>
 			<form onSubmit={getPreview}>
-				<label htmlFor="url">Please enter a valid LinkedIn url: </label>
-				<br />
+				<h1>Please enter a valid LinkedIn url:</h1>
 				<br />
 				<input
 					name="url"

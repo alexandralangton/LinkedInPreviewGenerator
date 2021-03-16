@@ -4,7 +4,6 @@ import Previews from './Previews';
 
 const Root = () => {
 	const [profile, setProfile] = useState({});
-
 	return (
 		<>
 			<Search setProfile={setProfile} />

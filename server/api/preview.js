@@ -16,9 +16,7 @@ router.get('/:url', async (req, res, next) => {
 			};
 			res.send(responseData);
 		} else {
-			let err = new Error();
-			err.status = status;
-			throw err;
+			res.status(status).send(data);
 		}
 	} catch (error) {
 		next(error);

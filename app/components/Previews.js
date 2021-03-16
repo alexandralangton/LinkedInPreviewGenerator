@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
 
 const Previews = (props) => {
 	const { title, description, src, url } = props.profile;
@@ -9,9 +10,9 @@ const Previews = (props) => {
 				<span>{url}</span>
 				<br />
 				<h3>
-					<b>{title}</b>
+					<b>{ReactHtmlParser(title)}</b>
 				</h3>
-				<span>{description}</span>
+				<span>{ReactHtmlParser(description)}</span>
 				<br />
 				<img src={src} width="200px" height="200px" />
 			</>
