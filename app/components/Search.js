@@ -5,12 +5,14 @@ const Search = ({ setProfile }) => {
 	const [url, setUrl] = useState('');
 
 	const getPreview = async (e) => {
-		if (!url.match(/www.linkedin.com/)) {
+		if (!url.match(/www.linkedin.com/i)) {
 			alert('Please enter a valid linkedin url');
 		} else {
 			e.preventDefault();
-			let endIdx = url.lastIndexOf('/');
-			const res = await axios.get(`/api/preview/${url.slice(endIdx + 1)}`);
+			let urlEnding = url
+				.replace(/((https?:\/\/)?www\.linkedin\.com(\/)?(in)?)(\/)/g, '')
+				.replace(/(\/)$/, '');
+			const res = await axios.get(`/api/preview/${urlEnding}`);
 			setProfile(res.data);
 		}
 		setUrl('');
