@@ -14,7 +14,7 @@ const ProfileCard = (props) => {
 				</a>
 				<br />
 				<h3>{ReactHtmlParser(title.replace(/<br>/, ''))}</h3>
-				<p>{ReactHtmlParser(description.replace(/<br>/, ''))}</p>
+				<p>{ReactHtmlParser(description.replace(/<br>/g, ''))}</p>
 			</div>
 		</div>
 	);

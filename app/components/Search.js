@@ -21,7 +21,6 @@ const Search = ({ setProfile }) => {
 			if (res.status !== 200) {
 				toast.error(res.data);
 			} else {
-				console.log(res.data);
 				setProfile(res.data);
 			}
 		}
